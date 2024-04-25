@@ -1,8 +1,5 @@
-FROM openjdk
-MAINTAINER "soumyadevops215@gmailcom"
-COPY . /usr/src/app
-WORKDIR /usr/src/app
-RUN javac Main.java
-CMD ["java", "Main"]
-
+FROM python:3.9-slim
+WORKDIR  . /usr/src/app
+COPY Main.py .
+CMD ["python", "Main.py"]
 
